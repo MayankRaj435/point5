@@ -1,6 +1,6 @@
-import { useRef, useState, useCallback, useEffect } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Sphere, Torus, Environment, Float, MeshTransmissionMaterial } from '@react-three/drei';
+import { useRef, useState, useCallback, useEffect, Suspense } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Sphere, Torus, Environment, Float, MeshTransmissionMaterial, Preload } from '@react-three/drei';
 import * as THREE from 'three';
 
 /* ------------------------------------------------------------------ */
@@ -154,6 +154,7 @@ const SphereWithRings = ({ activated }: { activated: boolean }) => {
           <MeshTransmissionMaterial 
             backside
             samples={4}
+            resolution={512}
             thickness={2}
             chromaticAberration={0.025}
             anisotropy={0.1}
@@ -190,10 +191,31 @@ const SphereWithRings = ({ activated }: { activated: boolean }) => {
 };
 
 /* ------------------------------------------------------------------ */
+/*  Loading tracker & Fallback                                        */
+/* ------------------------------------------------------------------ */
+
+const SceneTracker = ({ onReady }: { onReady: () => void }) => {
+  useEffect(() => {
+    onReady();
+  }, [onReady]);
+  return null;
+};
+
+const SphereFallback = () => (
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+    <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#C4EF17]/20 blur-[60px] animate-pulse" />
+    <div className="w-24 h-24 md:w-36 md:h-36 rounded-full border border-[#C4EF17]/30 absolute animate-pulse shadow-[0_0_50px_rgba(196,239,23,0.2)]" />
+    <div className="w-40 h-40 md:w-64 md:h-64 rounded-full border border-[#C4EF17]/10 absolute rotate-45" />
+    <div className="w-48 h-48 md:w-80 md:h-80 rounded-full border border-white/5 absolute -rotate-12" />
+  </div>
+);
+
+/* ------------------------------------------------------------------ */
 /*  DOM wrapper — handles hover dwell detection + shockwave overlay    */
 /* ------------------------------------------------------------------ */
 
 export const EmeraldSphere3D = () => {
+  const [isReady, setIsReady] = useState(false);
   const [activated, setActivated] = useState(false);
   const [shockwave, setShockwave] = useState(false);
   const dwellTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -229,6 +251,9 @@ export const EmeraldSphere3D = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Fallback visible while loading */}
+      {!isReady && <SphereFallback />}
+
       {/* Shockwave ring overlay */}
       {shockwave && (
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
@@ -259,13 +284,30 @@ export const EmeraldSphere3D = () => {
         </div>
       )}
 
-      <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
-        <ambientLight intensity={1.5} />
-        <directionalLight position={[10, 10, 5]} intensity={3} color="#C4EF17" />
-        <directionalLight position={[-10, -10, -5]} intensity={2} color="#ffffff" />
-        <Environment preset="city" />
-        <SphereWithRings activated={activated} />
-      </Canvas>
+      <div className={`w-full h-full transition-opacity duration-1000 ${isReady ? 'opacity-100' : 'opacity-0'}`}>
+        <Canvas 
+          camera={{ position: [0, 0, 10], fov: 45 }}
+          dpr={[1, 2]}
+          gl={{ 
+            powerPreference: 'high-performance', 
+            antialias: true, 
+            stencil: false, 
+            depth: true, 
+            alpha: true,
+            preserveDrawingBuffer: false
+          }}
+        >
+          <Suspense fallback={null}>
+            <ambientLight intensity={1.5} />
+            <directionalLight position={[10, 10, 5]} intensity={3} color="#C4EF17" />
+            <directionalLight position={[-10, -10, -5]} intensity={2} color="#ffffff" />
+            <Environment preset="city" />
+            <SphereWithRings activated={activated} />
+            <SceneTracker onReady={() => setIsReady(true)} />
+            <Preload all />
+          </Suspense>
+        </Canvas>
+      </div>
 
       {/* CSS keyframes injected inline */}
       <style>{`
