@@ -7,6 +7,7 @@ import { TextReveal } from '../TextReveal';
 import { ArrowUpRight, CheckCircle2, Zap, Trophy, Shield, Rocket } from 'lucide-react';
 import { GridBackground } from '../ui/GridBackground';
 import { BackgroundBeams } from '../ui/BackgroundBeams';
+import { BrandingPartners } from './BrandingPartners';
 
 import { PageDetailing } from '../ui/PageDetailing';
 
@@ -142,6 +143,9 @@ export const ServiceDetail = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* Branding Partners — only shown on the branding service page */}
+                {slug === 'branding' && <BrandingPartners />}
 
                 {/* CTA */}
                 <motion.div
