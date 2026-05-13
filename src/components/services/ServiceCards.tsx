@@ -3,9 +3,9 @@ import { useRef, type MouseEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../../data/content';
 import { SectionLabel } from '../SectionLabel';
-import { Palette, Share2, TrendingUp, Camera, Heart, Video, ArrowUpRight } from 'lucide-react';
+import { Palette, Share2, TrendingUp, Camera, Heart, Video, Monitor, ArrowUpRight } from 'lucide-react';
 
-const ICONS: Record<string, any> = { Palette, Share2, TrendingUp, Camera, Heart, Video };
+const ICONS: Record<string, any> = { Palette, Share2, TrendingUp, Camera, Heart, Video, Monitor };
 
 const ServiceCard = ({ service, index }: { service: typeof SERVICES[0]; index: number }) => {
   const Icon = ICONS[service.icon] || Palette;
@@ -85,16 +85,18 @@ const ServiceCard = ({ service, index }: { service: typeof SERVICES[0]; index: n
               {service.shortDesc}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-10">
-              {service.features.map((feature) => (
-                <span
-                  key={feature}
-                  className="text-[10px] uppercase tracking-widest font-bold px-4 py-1.5 bg-white/5 rounded-full border border-white/5 text-foreground/40 group-hover:text-accent group-hover:border-accent/20 transition-all"
-                >
-                  {feature}
-                </span>
-              ))}
-            </div>
+            {service.features.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-10">
+                {service.features.map((feature) => (
+                  <span
+                    key={feature}
+                    className="text-[10px] uppercase tracking-widest font-bold px-4 py-1.5 bg-white/5 rounded-full border border-white/5 text-foreground/40 group-hover:text-accent group-hover:border-accent/20 transition-all"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            )}
 
             <div className="flex items-center gap-3 text-accent text-xs font-bold uppercase tracking-[0.2em] group-hover:gap-5 transition-all duration-500">
               View Case Studies
