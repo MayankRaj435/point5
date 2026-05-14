@@ -53,37 +53,37 @@ export const TESTIMONIALS = [
   {
     quote: "Our social media presence has improved significantly with Point 5 Media. Their content planning and execution are smooth and effective.",
     author: "Panchsheel Multi speciality Hospital",
-    avatar: "https://point5media.com/wp-content/uploads/2023/11/nimo-home-9-testimonial-1.png",
+    avatar: "",
     rating: 5,
   },
   {
     quote: "Great experience with Point 5 Media. They understand our brand well and consistently create engaging content.",
     author: "Swarnaavya",
-    avatar: "https://point5media.com/wp-content/uploads/2023/11/nimo-home-9-testimonial-2.png",
+    avatar: "/brands/swarnaavya.png",
     rating: 5,
   },
   {
     quote: "Point 5 Media manages our social media creatively and keeps our page active and engaging. Highly recommended.",
     author: "Taste Factory",
-    avatar: "https://point5media.com/wp-content/uploads/2023/11/nimo-home-9-testimonial-3.png",
+    avatar: "",
     rating: 5,
   },
   {
     quote: "Professional team that helped us generate quality leads through well-planned campaigns and consistent content.",
     author: "Gungun Green Properties",
-    avatar: "https://point5media.com/wp-content/uploads/2023/11/nimo-home-9-testimonial-1.png",
+    avatar: "/brands/gungun-green.png",
     rating: 5,
   },
   {
     quote: "Point 5 Media handled our event promotions excellently, helping us reach a larger audience smoothly and professionally.",
     author: "Neeraj Sharma, Aura Beauty Expo Startup Founder",
-    avatar: "https://point5media.com/wp-content/uploads/2023/11/nimo-home-9-testimonial-3.png",
+    avatar: "",
     rating: 5,
   },
   {
     quote: "They helped grow our hotel's social media with professional visuals, engaging content, and consistent management.",
     author: "Hotel Broadway Benares",
-    avatar: "https://point5media.com/wp-content/uploads/2023/11/nimo-home-9-testimonial-2.png",
+    avatar: "",
     rating: 5,
   },
 ];
@@ -270,4 +270,4 @@ export const FAQS = [
   },
 ];
 
-export const HERO_BG = "https://point5media.com/wp-content/uploads/2024/04/Point5-Media-Productions-Main-Banner.jpg";
+export const HERO_BG = "/hero/Point5-Media-Productions-Main-Banner.jpg";

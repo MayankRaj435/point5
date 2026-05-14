@@ -102,7 +102,7 @@ export const Footer = () => {
           </p>
           <p className="text-xs uppercase tracking-widest text-white/20 font-bold">
             Made with <span className="text-accent">♥</span> by{' '}
-            <a href="https://point5media.com" className="text-white/40 hover:text-accent transition-colors">
+            <a href="/" className="text-white/40 hover:text-accent transition-colors">
               POINT5MEDIA
             </a>
           </p>

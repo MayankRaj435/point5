@@ -46,11 +46,7 @@ export const Hero = () => {
 
       {/* Background Image with Parallax */}
       <motion.div style={{ y: isMobile ? 0 : bgY, scale: isMobile ? 1 : bgScale }} className="absolute inset-0 z-0">
-        <img
-          src={HERO_BG}
-          alt="Point 5 Media Productions"
-          className="w-full h-full object-cover"
-        />
+
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
       </motion.div>

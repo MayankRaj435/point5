@@ -131,11 +131,11 @@ export function ContactSection() {
             viewport={{once: true}}
             transition={{delay: 0.2, duration: 0.8}}
           >
-            <div className="w-full flex flex-col items-center justify-center -space-y-24">
-              <div className="w-full h-[18rem] flex items-center justify-center">
+            <div className="w-full flex flex-col items-center justify-center -space-y-4 md:-space-y-8">
+              <div className="w-full flex items-center justify-center">
                 <TextHoverEffect text="POINT5" automatic />
               </div>
-              <div className="w-full h-[18rem] flex items-center justify-center">
+              <div className="w-full flex items-center justify-center">
                 <TextHoverEffect text="MEDIA" automatic />
               </div>
             </div>

@@ -22,7 +22,7 @@ export const HomePage = () => {
       <div className="py-20 bg-white/[0.01] border-y border-white/5 overflow-hidden">
         <TextCarousel 
           words={["POINT5MEDIA", "CINEMATIC", "INNOVATIVE", "STORYTELLING"]} 
-          className="h-[20rem] md:h-[30rem]"
+          className="py-12"
         />
       </div>
 

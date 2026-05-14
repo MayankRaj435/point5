@@ -23,7 +23,7 @@ export const TextCarousel = ({
   }, [words.length, interval]);
 
   return (
-    <div className={`h-[25rem] md:h-[35rem] flex items-center justify-center w-full relative overflow-visible ${className}`}>
+    <div className={`py-12 md:py-24 flex items-center justify-center w-full relative overflow-visible ${className}`}>
       <AnimatePresence mode="wait">
         <motion.div
           key={index}

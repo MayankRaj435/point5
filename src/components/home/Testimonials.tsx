@@ -82,20 +82,27 @@ export const Testimonials = () => {
                 >
                   <div 
                     className={cn(
-                      "relative p-1 rounded-full border transition-all duration-500 cursor-pointer pointer-events-auto",
+                      "relative rounded-full border transition-all duration-500 cursor-pointer pointer-events-auto bg-white/5",
                       i === activeIndex 
                         ? "border-accent ring-4 ring-accent/30 scale-125 z-20" 
-                        : "border-white/10 opacity-40 hover:opacity-100 scale-100 grayscale hover:grayscale-0"
+                        : "border-white/10 opacity-40 hover:opacity-100 scale-100 grayscale hover:grayscale-0",
+                      "flex items-center justify-center w-16 h-16 md:w-20 md:h-20"
                     )}
                     onClick={() => setActiveIndex(i)}
                   >
-                    <img
-                      src={t.avatar}
-                      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
-                      alt={t.author}
-                    />
+                    {t.avatar ? (
+                      <img
+                        src={t.avatar}
+                        className="w-full h-full rounded-full object-cover p-1"
+                        alt={t.author}
+                      />
+                    ) : (
+                      <span className="text-2xl font-bold font-display text-white/50 uppercase">
+                        {t.author.charAt(0)}
+                      </span>
+                    )}
                     {i === activeIndex && (
-                      <div className="absolute inset-0 rounded-full shadow-[0_0_40px_rgba(196,239,23,0.4)] animate-pulse" />
+                      <div className="absolute inset-0 rounded-full shadow-[0_0_40px_rgba(196,239,23,0.4)] animate-pulse pointer-events-none" />
                     )}
                   </div>
                 </motion.div>

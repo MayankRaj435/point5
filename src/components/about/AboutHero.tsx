@@ -11,11 +11,7 @@ export const AboutHero = () => {
     <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-32 pb-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={HERO_BG} 
-          alt="About Us Banner" 
-          className="w-full h-full object-cover opacity-20"
-        />
+
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
         
         {/* Animated Grid Pattern */}
