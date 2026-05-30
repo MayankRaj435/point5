@@ -8,7 +8,8 @@ export const COMPANY = {
   tagline: "Creative minds building impactful digital experience.",
   email: "point5media2022@gmail.com",
   phones: ["+91 73554 15186", "+91 83183 36283"],
-  address: "Plot No. 575/A, Manas Nagar Extension Durgakund, Varanasi, Uttar Pradesh – 221005, India",
+  address:
+    "Plot No. 575/A, Manas Nagar Extension Durgakund, Varanasi, Uttar Pradesh – 221005, India",
   hours: "Monday – Saturday: 8:00 AM – 10:00 PM",
   heroDescription:
     "a multidisciplinary creative consultancy and a results-driven digital marketing agency that assists brands in growing, connecting, and thriving in the digital world. We specialize in creating engaging campaigns and building strong social media brands that bring ideas to life.",
@@ -24,16 +25,66 @@ export const COMPANY = {
 };
 
 export const TEAM_MEMBERS = [
-  { name: "Akanksha Pratap", role: "Agency Manager", image: "/team/IMG_9926.webp", bio: "" },
-  { name: "Simran Gupta", role: "Senior Social Manager", image: "/team/IMG_9937.webp", bio: "" },
-  { name: "Eshita Jaiswal", role: "Senior Social Manager", image: "/team/IMG_9948.webp", bio: "" },
-   { name: "Alok Jaiswal", role: "Director of Photography", image: "/team/IMG_9983.JPG.webp", bio: "" },
-  { name: "Neeraj Kumar Singh", role: "Senior Video Editor", image: "/team/IMG_9884.webp", bio: "" },
-   { name: "Jahnavi Pandey", role: "Video Editor", image: "/team/IMG_9887.webp", bio: "" },
-  { name: "Vasid Khan", role: "Graphic Designer", image: "/team/IMG_9879.webp", bio: "" },
-   { name: "Md Jishan", role: "Ad Manager", image: "/team/IMG_9904.webp", bio: "" },
-  { name: "Shreya Vishwakarma", role: "Social Media Intern", image: "/team/IMG_9894.webp", bio: "" },
-  { name: "Amaan Rashid", role: "Social Media Intern", image: "/team/IMG_9898.webp", bio: "" },
+  {
+    name: "Akanksha Pratap",
+    role: "Agency Manager",
+    image: "/team/IMG_9926.webp",
+    bio: "",
+  },
+  {
+    name: "Simran Gupta",
+    role: "Senior Social Manager",
+    image: "/team/IMG_9937.webp",
+    bio: "",
+  },
+  {
+    name: "Eshita Jaiswal",
+    role: "Senior Social Manager",
+    image: "/team/IMG_9948.webp",
+    bio: "",
+  },
+  {
+    name: "Alok Jaiswal",
+    role: "Director of Photography",
+    image: "/team/IMG_9983.JPG.webp",
+    bio: "",
+  },
+  {
+    name: "Neeraj Kumar Singh",
+    role: "Senior Video Editor",
+    image: "/team/IMG_9884.webp",
+    bio: "",
+  },
+  {
+    name: "Jahnavi Pandey",
+    role: "Video Editor",
+    image: "/team/IMG_9887.webp",
+    bio: "",
+  },
+  {
+    name: "Vasid Khan",
+    role: "Graphic Designer",
+    image: "/team/IMG_9879.webp",
+    bio: "",
+  },
+  {
+    name: "Md Jishan",
+    role: "Ad Manager",
+    image: "/team/IMG_9904.webp",
+    bio: "",
+  },
+  {
+    name: "Shreya Vishwakarma",
+    role: "Social Media Intern",
+    image: "/team/IMG_9894.webp",
+    bio: "",
+  },
+  {
+    name: "Amaan Rashid",
+    role: "Social Media Intern",
+    image: "/team/IMG_9898.webp",
+    bio: "",
+  },
 ];
 
 export const FOUNDERS = [
@@ -53,56 +104,90 @@ export const FOUNDERS = [
 
 export const BRAND_LOGOS = [
   { name: "Swarnaavya", src: "/brands/swarnaavya.png", slug: "swarnaavya" },
-  { name: "Magadh Delight", src: "/brands/magadh-delight.png", slug: "magadh-delight" },
-  { name: "Gungun Green Properties", src: "/brands/gungun-green.png", slug: "gungun-properties" },
+  {
+    name: "Magadh Delight",
+    src: "/brands/magadh-delight.png",
+    slug: "magadh-delight",
+  },
+  {
+    name: "Gungun Green Properties",
+    src: "/brands/gungun-green.png",
+    slug: "gungun-properties",
+  },
   { name: "Kashi Yatra", src: "/brands/kashi-yatra.png", slug: "kashiyatra" },
-  { name: "The Paan Banarasi", src: "/brands/paan-banarasi.png", slug: "paan-banarasi" },
+  {
+    name: "The Paan Banarasi",
+    src: "/brands/paan-banarasi.png",
+    slug: "paan-banarasi",
+  },
   { name: "The Tea Castle", src: "/brands/tea-castle.png", slug: "tea-castle" },
-  { name: "Mahajan Greens", src: "/brands/mahajan-greens.png", slug: "mahajan-greens" },
-  { name: "Sarvaga Fashions", src: "/brands/sarvaga-fashions.png", slug: "sarvaga-fashions" },
+  {
+    name: "Mahajan Greens",
+    src: "/brands/mahajan-greens.png",
+    slug: "mahajan-greens",
+  },
+  {
+    name: "Sarvaga Fashions",
+    src: "/brands/sarvaga-fashions.png",
+    slug: "sarvaga-fashions",
+  },
 ];
 
 export const TESTIMONIALS = [
   {
-    quote: "Our social media presence has improved significantly with Point 5 Media. Their content planning and execution are smooth and effective.",
+    quote:
+      "Our social media presence has improved significantly with Point 5 Media. Their content planning and execution are smooth and effective.",
     author: "Panchsheel Multi speciality Hospital",
     avatar: "",
     rating: 5,
   },
   {
-    quote: "Great experience with Point 5 Media. They understand our brand well and consistently create engaging content.",
+    quote:
+      "Great experience with Point 5 Media. They understand our brand well and consistently create engaging content.",
     author: "Swarnaavya",
     avatar: "/brands/swarnaavya.png",
     rating: 5,
   },
   {
-    quote: "Point 5 Media manages our social media creatively and keeps our page active and engaging. Highly recommended.",
+    quote:
+      "Point 5 Media manages our social media creatively and keeps our page active and engaging. Highly recommended.",
     author: "Taste Factory",
     avatar: "",
     rating: 5,
   },
   {
-    quote: "Professional team that helped us generate quality leads through well-planned campaigns and consistent content.",
+    quote:
+      "Professional team that helped us generate quality leads through well-planned campaigns and consistent content.",
     author: "Gungun Green Properties",
     avatar: "/brands/gungun-green.png",
     rating: 5,
   },
   {
-    quote: "Point 5 Media handled our event promotions excellently, helping us reach a larger audience smoothly and professionally.",
+    quote:
+      "Point 5 Media handled our event promotions excellently, helping us reach a larger audience smoothly and professionally.",
     author: "Neeraj Sharma, Aura Beauty Expo Startup Founder",
     avatar: "",
     rating: 5,
   },
   {
-    quote: "They helped grow our hotel's social media with professional visuals, engaging content, and consistent management.",
+    quote:
+      "They helped grow our hotel's social media with professional visuals, engaging content, and consistent management.",
     author: "Hotel Broadway Benares",
     avatar: "",
     rating: 5,
   },
 ];
-
 export interface Service {
   slug: string;
+  serviceType:
+    | "BRANDING"
+    | "SOCIAL_MEDIA_MANAGEMENT"
+    | "DIGITAL_MARKETING"
+    | "BRAND_PRODUCT_SHOOTS"
+    | "WEDDING"
+    | "EVENT_PHOTOGRAPHY_VIDEOGRAPHY"
+    | "WEBSITE_DEVELOPMENT_MANAGEMENT";
+
   title: string;
   shortDesc: string;
   fullDesc: string;
@@ -113,22 +198,27 @@ export interface Service {
 export const SERVICES: Service[] = [
   {
     slug: "branding",
+    serviceType: "BRANDING",
     title: "Branding",
-    shortDesc: "We go beyond logos - building complete visual identities that tell your story and reflect your values. From color palettes to typography, tone of voice to brand guidelines, we shape every element to ensure your brand stands out across every touch.",
+    shortDesc:
+      "We go beyond logos - building complete visual identities that tell your story and reflect your values. From color palettes to typography, tone of voice to brand guidelines, we shape every element to ensure your brand stands out across every touch.",
     fullDesc:
       "We go beyond logos - building complete visual identities that tell your story and reflect your values. From color palettes to typography, tone of voice to brand guidelines, we shape every element to ensure your brand stands out across every touch.",
     features: [
       "Color Palettes",
       "Typography",
       "Tone of Voice",
-      "Brand Guidelines"
+      "Brand Guidelines",
     ],
     icon: "Palette",
   },
+
   {
     slug: "social-media-management",
+    serviceType: "SOCIAL_MEDIA_MANAGEMENT",
     title: "Social Media Management",
-    shortDesc: "We manage your social media with a strategic, creative approach tailored to your brand; turning content into powerful storytelling that boosts visibility, engagement, and lasting brand recall.",
+    shortDesc:
+      "We manage your social media with a strategic, creative approach tailored to your brand; turning content into powerful storytelling that boosts visibility, engagement, and lasting brand recall.",
     fullDesc:
       "We manage your social media with a strategic, creative approach tailored to your brand; turning content into powerful storytelling that boosts visibility, engagement, and lasting brand recall.",
     features: [
@@ -136,54 +226,65 @@ export const SERVICES: Service[] = [
       "Facebook",
       "LinkedIn",
       "YouTube",
-      "Google My Business"
+      "Google My Business",
     ],
     icon: "Share2",
   },
+
   {
     slug: "digital-marketing",
+    serviceType: "DIGITAL_MARKETING",
     title: "Digital Marketing",
-    shortDesc: "Our digital marketing services blend SEO, Google Ads, and Meta Ads to boost visibility, reach the right audience, and drive measurable, sustainable growth for your brand.",
+    shortDesc:
+      "Our digital marketing services blend SEO, Google Ads, and Meta Ads to boost visibility, reach the right audience, and drive measurable, sustainable growth for your brand.",
     fullDesc:
       "Our digital marketing services blend SEO, Google Ads, and Meta Ads to boost visibility, reach the right audience, and drive measurable, sustainable growth for your brand.",
-    features: [
-      "SEO",
-      "Google Ads",
-      "Meta Ads"
-    ],
+    features: ["SEO", "Google Ads", "Meta Ads"],
     icon: "TrendingUp",
   },
+
   {
     slug: "brand-product-shoots",
+    serviceType: "BRAND_PRODUCT_SHOOTS",
     title: "Brand and Product Shoots",
-    shortDesc: "Our brand and product shoots create high-quality, concept-driven visuals that highlight your brand identity and product details — perfect for websites, social media, and marketing campaigns, while boosting brand value and engagement.",
+    shortDesc:
+      "Our brand and product shoots create high-quality, concept-driven visuals that highlight your brand identity and product details — perfect for websites, social media, and marketing campaigns, while boosting brand value and engagement.",
     fullDesc:
       "Our brand and product shoots create high-quality, concept-driven visuals that highlight your brand identity and product details — perfect for websites, social media, and marketing campaigns, while boosting brand value and engagement.",
     features: [],
     icon: "Camera",
   },
+
   {
     slug: "wedding-photography-videography",
+    serviceType: "WEDDING",
     title: "Wedding Photography / Videography",
-    shortDesc: "Our wedding photography and videography capture timeless emotions through candid moments, genuine expressions, and beautifully composed visuals — preserving every detail of your special day with care and creativity.",
+    shortDesc:
+      "Our wedding photography and videography capture timeless emotions through candid moments, genuine expressions, and beautifully composed visuals — preserving every detail of your special day with care and creativity.",
     fullDesc:
       "Our wedding photography and videography capture timeless emotions through candid moments, genuine expressions, and beautifully composed visuals — preserving every detail of your special day with care and creativity.",
     features: [],
     icon: "Heart",
   },
+
   {
     slug: "event-photography-videography",
+    serviceType: "EVENT_PHOTOGRAPHY_VIDEOGRAPHY",
     title: "Event Photography / Videography",
-    shortDesc: "Our event photography and videography capture key moments and energy with professional, creative coverage — delivering compelling visuals that reflect the true essence of your event.",
+    shortDesc:
+      "Our event photography and videography capture key moments and energy with professional, creative coverage — delivering compelling visuals that reflect the true essence of your event.",
     fullDesc:
       "Our event photography and videography capture key moments and energy with professional, creative coverage — delivering compelling visuals that reflect the true essence of your event.",
     features: [],
     icon: "Video",
   },
+
   {
     slug: "website-development-management",
+    serviceType: "WEBSITE_DEVELOPMENT_MANAGEMENT",
     title: "Website Development and Management",
-    shortDesc: "Our website development and management services deliver responsive, user-friendly websites that look great, work seamlessly, and support your brand's growth.",
+    shortDesc:
+      "Our website development and management services deliver responsive, user-friendly websites that look great, work seamlessly, and support your brand's growth.",
     fullDesc:
       "Our website development and management services deliver responsive, user-friendly websites that look great, work seamlessly, and support your brand's growth.",
     features: [],
@@ -249,10 +350,27 @@ export const MISSION_CARDS = [
 ];
 
 export const WHY_CHOOSE_US = [
-  { title: "Seamless Collaboration", desc: "Transparent communication and feedback loops at every stage of the project.", icon: "Users" },
-  { title: "Creative Ideas", desc: "Fresh, innovative approaches tailored to make your brand unforgettable.", icon: "Lightbulb" },
-  { title: "2+ Years Experience", desc: "Over 2 years of experience delivering innovative digital solutions.", stat: "99+ Happy clients", icon: "Award" },
-  { title: "7 Day Turnaround", desc: "Fast delivery without compromising on quality or creativity.", icon: "Clock" },
+  {
+    title: "Seamless Collaboration",
+    desc: "Transparent communication and feedback loops at every stage of the project.",
+    icon: "Users",
+  },
+  {
+    title: "Creative Ideas",
+    desc: "Fresh, innovative approaches tailored to make your brand unforgettable.",
+    icon: "Lightbulb",
+  },
+  {
+    title: "2+ Years Experience",
+    desc: "Over 2 years of experience delivering innovative digital solutions.",
+    stat: "99+ Happy clients",
+    icon: "Award",
+  },
+  {
+    title: "7 Day Turnaround",
+    desc: "Fast delivery without compromising on quality or creativity.",
+    icon: "Clock",
+  },
 ];
 
 export const FUN_FACTS = [
@@ -264,7 +382,8 @@ export const FUN_FACTS = [
 export const FAQS = [
   {
     question: "What services does Point 5 Media offer?",
-    answer: "Branding • Social Media Management • Digital Marketing • Product and Model Shoots • Wedding Photography • Event Photography / Videography",
+    answer:
+      "Branding • Social Media Management • Digital Marketing • Product and Model Shoots • Wedding Photography • Event Photography / Videography",
   },
   {
     question: "What is digital marketing?",
@@ -289,7 +408,8 @@ export const BLOG_POSTS = [
   {
     slug: "future-of-digital-storytelling",
     title: "The Future of Digital Storytelling",
-    excerpt: "Explore how interactive experiences and immersive visuals are reshaping the way brands connect with audiences in the modern digital era.",
+    excerpt:
+      "Explore how interactive experiences and immersive visuals are reshaping the way brands connect with audiences in the modern digital era.",
     date: "May 12, 2026",
     category: "Design & Innovation",
     image: "/team/IMG_9879.webp",
@@ -297,7 +417,8 @@ export const BLOG_POSTS = [
   {
     slug: "mastering-social-media-growth",
     title: "Mastering Social Media Growth",
-    excerpt: "Unlock the secrets to building a loyal online community. Discover the strategies we use to scale social media presence authentically.",
+    excerpt:
+      "Unlock the secrets to building a loyal online community. Discover the strategies we use to scale social media presence authentically.",
     date: "April 28, 2026",
     category: "Marketing",
     image: "/team/IMG_9926.webp",
@@ -305,7 +426,8 @@ export const BLOG_POSTS = [
   {
     slug: "power-of-visual-identity",
     title: "The Power of Visual Identity",
-    excerpt: "A deep dive into why your brand's colors, typography, and logo matter more than ever in a saturated digital market.",
+    excerpt:
+      "A deep dive into why your brand's colors, typography, and logo matter more than ever in a saturated digital market.",
     date: "April 15, 2026",
     category: "Branding",
     image: "/team/IMG_9937.webp",
@@ -313,10 +435,10 @@ export const BLOG_POSTS = [
   {
     slug: "creating-cinematic-campaigns",
     title: "Creating Cinematic Ad Campaigns",
-    excerpt: "Behind the scenes of our video production process. Learn how we translate brand values into compelling visual narratives.",
+    excerpt:
+      "Behind the scenes of our video production process. Learn how we translate brand values into compelling visual narratives.",
     date: "March 30, 2026",
     category: "Production",
     image: "/team/IMG_9948.webp",
   },
 ];
-

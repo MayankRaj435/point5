@@ -2,11 +2,9 @@ import { motion } from 'motion/react';
 import { ContactHero } from '../components/contact/ContactHero';
 import { ContactInfo } from '../components/contact/ContactInfo';
 import { ContactForm } from '../components/contact/ContactForm';
-
 import { GridBackground } from '../components/ui/GridBackground';
 import { BackgroundBeams } from '../components/ui/BackgroundBeams';
 import { PageDetailing } from '../components/ui/PageDetailing';
-import { TextCarousel } from '../components/ui/text-carousel';
 
 export const ContactPage = () => {
   return (
