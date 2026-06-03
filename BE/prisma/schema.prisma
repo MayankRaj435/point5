@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  name     String?
+  role     Role    @default(USER)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+model Contact {
+  id String @id @default(cuid())
+
+  fullName    String
+  email       String
+  phoneNumber String?
+  subject     String
+  projectInfo String? @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Blog {
+  id        Int      @id @default(autoincrement())
+  title     String
+  thumbnail String // thumbnail image URL
+  cover     String // cover image URL
+  content   String // HTML or JSON from Tiptap
+  published Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum ServiceType {
+  BRANDING
+  SOCIAL_MEDIA_MANAGEMENT
+  DIGITAL_MARKETING
+  BRAND_PRODUCT_SHOOTS
+  WEDDING
+  EVENT_PHOTOGRAPHY_VIDEOGRAPHY
+  WEBSITE_DEVELOPMENT_MANAGEMENT
+}
+
+model PortfolioCard {
+  id String @id @default(cuid())
+
+  // Identity
+  slug String @unique
+
+  // Display
+  name     String
+  category String
+
+  // Branding
+  tagline     String
+  description String @db.Text
+
+  // Media
+  logo String
+
+  // Visual Styling
+  accent String?
+  bg     String?
+
+  // Structured Arrays
+  deliverables String[]
+
+  // Backend Categorization
+  serviceType ServiceType
+
+  // Controls
+  featured     Boolean @default(false)
+  published    Boolean @default(true)
+  displayOrder Int     @default(0)
+
+  // SEO / Tags
+  tags String[]
+
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
